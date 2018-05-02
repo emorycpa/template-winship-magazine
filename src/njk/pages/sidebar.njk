@@ -1,0 +1,15 @@
+{% extends "layout.njk" %} 
+{% set pageTitle = 'Sidebar Page' %}
+{% block head %}
+<title>{{ pageTitle }} | {{ siteName }}</title>
+{% endblock %} 
+
+{% block content %}
+<main>
+
+{% include "partials/hero/hero-small.njk" %}
+
+{% include "partials/sections/page-sidebar.njk" %}
+
+</main>
+{% endblock %}

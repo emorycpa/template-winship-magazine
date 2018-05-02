@@ -1,0 +1,133 @@
+.carousel {
+    .carousel-caption {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: theme-color("light");
+        }
+        p,
+        ul,
+        ol,
+        dl,
+        blockquote {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        background-color:rgba($black, .85);
+    }
+    [class*="carousel-control-"] {
+        font-size: 2.5rem;
+        transition: all .3s ease-in-out;
+        &:focus span {
+            background-color: rgba(theme-color("light"), .25);
+            padding: 2rem;
+        }
+        .svg-inline--fa {
+            color: theme-color("light");
+            background-color: $black;
+            border: solid 4px $black;
+            border-radius: 50%;
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        &:focus {
+            border: 4px solid $sky-blue;
+        }
+    }
+    .carousel-control-prev {
+        &:hover {
+            background: linear-gradient(to right, rgba($black, 0.5) 0%, rgba($black, 0) 100%);
+        }
+    }
+    .carousel-control-next {
+        &:hover {
+            background: linear-gradient(to right, rgba($black, 0) 0%, rgba($black, 0.5) 100%);
+        }
+    } // Carousel with Thumbnail Indicators
+    .carousel-indicators {
+        max-width: 100%;
+        bottom: 1rem;
+        &.carousel-indicators-thumbs {
+            padding-top: 5px;
+            position: relative;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            margin: 0 auto;
+            li,
+            li.active {
+                width: 6.25rem;
+                height: 6.25rem;
+            }
+            li {
+                cursor: pointer;
+                overflow: hidden;
+                transition: opacity .3s ease-in-out;
+                img {
+                    transition: all .3s ease;
+                }
+                &:after,
+                &:before {
+                    content: none;
+                }
+                &:not(.active) {
+                    opacity: .5;
+                    img {
+                        filter: grayscale(50%);
+                    }
+                }
+                &:hover {
+                    opacity: 1;
+                    img {
+                        transform: scale(1.2);
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .carousel {
+        .carousel-caption,
+        .carousel-indicators {
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            padding: 1rem;
+        }
+        .carousel-caption {
+            background: $black;
+            padding: 1rem;
+        }
+        .carousel-indicators li,
+        .carousel-indicators li.active {
+            height: 2.25rem;
+            width: 2.25rem;
+        }
+        .carousel-indicators li {
+            background-color: theme-color("primary");
+            &.active {
+                background-color: theme-color("secondary");
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .carousel {
+        .carousel-caption {
+            padding: 1rem 1rem 3rem 1rem; // Add room between content and indicators
+        }
+        .carousel-indicators li {
+            outline: 1px solid theme-color("light");
+        }
+    }
+}

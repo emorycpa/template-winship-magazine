@@ -1,0 +1,40 @@
+{
+  "name": "template-standard.emory.dev",
+  "version": "1.1.9",
+  "description": "The default template used across Emory University web domains.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "bootstrap": "4.1.1",
+    "browser-sync": "^2.23.6",
+    "chalk": "^2.3.1",
+    "gulp": "3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-tap": "^1.0.1",
+    "gulp-typescript": "^3.2.2",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "gulp-inline-source": "^3.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "test": "gulp build"
+  },
+  "author": "Kayla Pratt - lockepratt@gmail.com, Bryce Roberts - bryce.leitner.roberts@gmail.com",
+  "license": "CC-BY-NC-ND-4.0"
+}

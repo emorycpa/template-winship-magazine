@@ -1,0 +1,52 @@
+<!-- jQuery -->
+<script src="{{ includePath }}js/vendor/jquery/jquery.min.js"></script>
+
+<!--  
+#########################################
+BOOTSTRAP COMPONENETS
+Include only the JS components needed
+for the website to function
+#########################################
+-->
+<script src="{{ includePath }}js/vendor/popper/popper.min.js"></script> <!-- BS collapse dependency -->
+<script src="{{ includePath }}js/vendor/bootstrap/alert.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/button.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/collapse.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/dropdown.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/modal.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/scrollspy.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/tab.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/tooltip.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/popover.js"></script>
+<script src="{{ includePath }}js/vendor/bootstrap/util.js"></script>
+
+{% if (pageTitle == 'Carousel') or (pageTitle == 'Carousel with Thumbnails') %}
+<script src="{{ includePath }}js/vendor/bootstrap/carousel.js"></script>
+{% endif %}
+
+{% if pageTitle == 'Datatable' %}
+<script src="{{ includePath }}js/vendor/dataTables/dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#dataTable').DataTable();
+});
+</script>
+{% endif %}
+
+<!-- PAYPAL BOOTSTRAP ACCESSIBLITY https://github.com/paypal/bootstrap-accessibility-plugin/tree/master/plugins/js -->
+<script src="{{ includePath }}js/vendor/paypal/bootstrap-accessibility.js"></script>
+
+<!-- DETECT BOOTSTRAP BREAKPOINTS https://github.com/JacobLett/IfBreakpoint/ -->
+<script src="{{ includePath }}js/vendor/if-b4-breakpoint/if-b4-breakpoint.min.js"></script>
+
+<!--  
+#########################################
+PRIMARY SITE JAVASCRIPT
+This javascript is a combination of all
+locally imported JS files.
+#########################################
+-->
+<script src="{{ includePath }}js/site.js"></script>
+
+<!-- ADDTHIS SHARE BUTTONS -->
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5acf755a44af0bdd"></script>

@@ -1,0 +1,20 @@
+.dropdown,
+.btn-group {
+    white-space: normal; // Let text wrap if it needs to
+    &.show {
+        .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// Rotate arrows to indicate open/closed state
+.dropdown-toggle::after {
+    border-top-color: $sky-blue;
+    transition: transform .2s ease-in-out;
+}
+
+// Adjust header size to compensate for font appearance
+.dropdown-header {
+    font-size: 1rem;
+}

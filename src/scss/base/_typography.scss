@@ -1,0 +1,366 @@
+/*
+ *
+ * Default spacing
+ *
+*/
+
+// Constrain width of text block elements regardless of their container width
+p,
+ul,
+ol:not(.breadcrumb),
+dl,
+blockquote {
+    max-width: 50rem;
+    &.text-center {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.text-center {
+    p,
+    ul,
+    ol,
+    dl,
+    blockquote {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// Add margins to tops of headlines after body text elements to better separate them from text above
+p,
+ul,
+ol,
+dl,
+blockquote,
+table,
+a[name] {
+    +h1,
+    +h2,
+    +h3,
+    +h4,
+    +h5,
+    +h6 {
+        margin-top: 1em;
+    }
+}
+
+/*
+ *
+ * Links
+ *
+*/
+
+// Remove default link underline on hover, for a visual indication other than color
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Remove link underlines from buttons, navs, and other widgets
+.btn,
+.nav a,
+.navbar a,
+a.card,
+a.badge,
+.pagination a,
+.dropdown-menu a,
+a.list-group-item-action,
+.dataTables_paginate a {
+    text-decoration: none;
+}
+
+/*
+ *
+ * Headlines
+ *
+*/
+
+// Headline default typography
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    @include headlineFont;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+caption,
+legend,
+.btn,
+.pagination,
+.badge,
+.popover-header,
+.calendar__date {
+    @include subheadFont;
+}
+
+// Headline font looks better with reduced letter spacing at large sizes
+h1,
+.h1,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    letter-spacing: -.03em;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
+    letter-spacing: -.02em;
+}
+
+// Headline default colors
+h1,
+.h1,
+h3,
+.h3,
+h5,
+.h5,
+h6,
+.h6 {
+    color: theme-color("primary");
+}
+
+h2,
+.h2,
+h4,
+.h4,
+caption,
+legend {
+    color: $gold;
+}
+
+// Small text in headlines
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+caption,
+legend {
+    small {
+        @include body-font;
+        color: $text-muted;
+    }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    small {
+        font-size: 50%;
+    }
+}
+
+// Reduce headline sizes on mobile
+@include media-breakpoint-down(md) {
+    .display-1 {
+        font-size: 4rem;
+    }
+    .display-2 {
+        font-size: 3.5rem;
+    }
+    h1,
+    .display-3 {
+        font-size: 3rem;
+    }
+    h2,
+    .display-4 {
+        font-size: 2.25rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+}
+
+/*
+ *
+ * Lists
+ *
+*/
+
+// Remove indent from lists
+ol {
+    padding-left: 1.125em;
+}
+
+dl {
+    padding-left: 0;
+    dl {
+        padding-left: 1.5em;
+    }
+}
+
+// Custom, consistent bullet style for all ULs in main content
+main ul:not(.list-group):not(.list-unstyled):not(.list-inline):not(.pagination):not(.nav):not(.list-chevron) {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+        padding-left: 1.125em;
+        position: relative;
+        &::before {
+            content: "•";
+            font-weight: bold;
+            color: $sky-blue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+// Give DTs a bottom margin to match DDs
+dt {
+    margin-bottom: .5rem;
+}
+
+/*
+ *
+ * Blockquotes
+ *
+*/
+
+.blockquote {
+    color: gray("900");
+    padding: 1rem 0 1rem 1.5rem;
+    border-left: solid 5px $sky-blue;
+    &.text-center {
+        padding: 1rem 0;
+        border-left: 0;
+        border-top: solid 5px $sky-blue;
+    }
+    &.text-right {
+        padding-right: 1.5rem;
+        padding-left: 0;
+        border-right: solid 5px $sky-blue;
+        border-left: 0;
+    }
+    footer,
+    .blockquote-footer {
+        font-size: .875rem;
+        font-style: normal;
+    }
+}
+
+// Remove default italic from cite, so italics can be applied selectively to publication names
+cite {
+    font-style: normal;
+}
+
+// Fancy alternate formatting for blockquotes
+.blockquote--alt {
+    font-family: $spectral;
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: -.01em;
+    padding: 0;
+    border-left: none;
+    footer,
+    .blockquote-footer {
+        font-family: $body-font;
+        letter-spacing: normal;
+    }
+}
+
+/*
+ *
+ * Highlighted text
+ *
+*/
+
+// Preformatted text
+pre {
+    background-color: theme-color("dark");
+    color: theme-color("light");
+    padding: $spacer;
+}
+
+// Highlight inserted text so it doesn't look like a link
+ins {
+    text-decoration: none;
+    background-color: gray("200");
+}
+
+/*
+ *
+ * Tables
+ *
+*/
+
+// Headline-like formatting for table caption
+caption {
+    font-size: $h4-font-size;
+    line-height: $headings-line-height;
+    caption-side: top;
+}
+
+/*
+ *
+ * Forms
+ *
+*/
+
+// Headline-like formatting for form legend
+legend {
+    font-size: $h3-font-size;
+    line-height: $headings-line-height;
+}
+
+// Differentiate small text within captions and legends
+caption,
+legend {
+    small {
+        font-size: .875rem;
+        line-height: 1.3;
+        color: $black;
+    }
+}
+
+/*
+ *
+ * Figures
+ *
+*/
+
+figcaption,
+.figure-caption {
+    color: gray("900");
+    padding: .5rem .75rem;
+    border: solid 1px $border-color;
+    border-top: none;
+}

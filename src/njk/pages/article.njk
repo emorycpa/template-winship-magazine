@@ -1,0 +1,13 @@
+{% extends "layout.njk" %} 
+{% set pageTitle = 'Article' %}
+{% block head %}
+<title>{{ pageTitle}} | {{ siteName }}</title>
+{% endblock %} 
+
+{% block content %}
+<main>
+
+{% include "partials/sections/article.njk" %}
+
+</main>
+{% endblock %}

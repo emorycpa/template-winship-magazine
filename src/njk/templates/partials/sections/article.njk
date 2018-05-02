@@ -1,0 +1,162 @@
+{% include "partials/snippets/breadcrumbs.njk" %}
+
+<article class="article">
+
+	<header class="hero overlay article__hero">
+		<div class="container pt-4 pb-5 d-flex h-100 align-items-center text-white">
+			<div>
+				<h1 class="display-3 article__title">News Article that has a Medium Length Title</h1>
+				<hr class="divider-ornamental align-left">
+				<p class="lead">Insert article excerpt or lead text here to make an impact. The hero image can be a custom article "featured image".
+					Article content areas duplicate current news center structure.</p>
+			</div>
+		</div>
+		<!-- .container -->
+	</header>
+
+	<div class="section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+
+					<div class="article__meta pb-3 mb-3">
+						<small>
+							<span class="article__author">
+								By Johnny J. Smith
+							</span>
+							<span class="article__datetime">
+								<!-- Date and Time -->
+								<time datetime="2018-05-15T09:00">May 15, 2018 @ 9:00 AM</time>
+							</span>
+						</small>
+					</div>
+					<!-- .article__meta -->
+
+					<figure class="figure mb-5">
+						<img src="https://placehold.it/1520x855" alt="placeholder" class="figure-img img-fluid">
+						<figcaption class="figure-caption">Lead Photo: It's important to add a caption to a news story image to give the reader context.</figcaption>
+					</figure>
+
+					<div class="wysiwyg">
+						
+						<p class="lead">This is the first sentence of the news article, with a different style using <code>.lead</code> text. Optional.</p>
+
+						{% for i in range(0, 3) -%}
+							{% include "partials/snippets/paragraph.njk" %}
+						{% endfor %}
+
+						<h2>And this section has some floated images</h2>
+						<figure class="figure float-sm-left mr-3">
+							<img class="img-fluid" src="https://placehold.it/250" alt="placeholder">
+							<figcaption class="figure-caption">Caption for the article image.</figcaption>
+						</figure>
+						
+						{% for i in range(0, 4) -%}
+							{% include "partials/snippets/paragraph.njk" %}
+						{% endfor %}
+
+						<figure class="figure float-sm-right ml-3">
+							<img class="img-fluid" src="https://placehold.it/250" alt="placeholder">
+							<figcaption class="figure-caption">Caption for the article image.</figcaption>
+						</figure>
+
+						{% for i in range(0, 3) -%}
+							{% include "partials/snippets/paragraph.njk" %}
+						{% endfor %}
+						
+						{% include "partials/snippets/share-buttons.njk" %}
+
+						<div class="row">
+
+							<div class="col-md-6 col-lg-8">
+								<div class="alert alert-info">
+									<h2 class="h5 text-muted">"News Article that has a Medium Length Title"</h2>
+									<div class="article__post">
+										<p class="font-italic">Last updated:
+											<time datetime="2018-05-22T19:57">May 22, 2018 @ 7:57 PM</time>
+										</p>
+										<p>This section can contain some meta information about the article including Author Info, corrections, retractions,
+											citations, media, etc.</p>
+										<ul>
+											{% for i in range(0, 3) -%}
+											<li>
+												<a href="#">The Wall Street Journal<sup>[1]</sup></a>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+									<!-- .article__post -->
+								</div>
+								<!-- .alert -->
+							</div>
+							<!-- .col-lg-8 -->
+
+							<div class="col-md-6 col-lg-4">
+								<div class="article__resources">
+									<h2 class="h5 mt-0">Resources</h2>
+									<ul class="list-unstyled">
+										{% for i in range(0, 2) -%}
+										<li>
+											<a href="">Title of a Resource Related to the Article</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+								<!-- .article__resources -->
+
+								<div class="article__tags">
+									<h2 class="h5">Tags</h2>
+									<ul class="list-inline mb-0">
+										{% for i in range(0, 6) -%}
+										<li>
+											<small>
+												<a href="">Tag label</a>
+											</small>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+								<!-- .article__tags -->
+
+							</div>
+							<!-- .col-lg-4 -->
+						</div>
+						<!-- .row -->
+
+					</div>
+					<!-- .wysiwyg -->
+
+				</div>
+				<!-- .col-md-8 -->
+			</div>
+			<!-- .row -->
+		</div>
+		<!-- .container -->
+	</div>
+	<!-- .section -->
+
+	<footer class="article__related section-lg bg-pale-blue bg-pattern-geometric pt-5">
+		<div class="container">
+			<div class="wysiwyg">
+				<h2 class="mt-0">Related Stories</h2>
+				<div class="row">
+					{% for i in range(0, 4) -%}
+					<div class="col-6 col-md-3 mb-3 mb-lg-0">
+						<article class="article article__related-entry">
+							<a href="#">
+								<img class="img-fluid w-100 mb-2" src="https://placehold.it/510x287" alt="placeholder">
+								<h1 class="article__related-title body-text font-weight-bold">Related Article Title that is a Little Long</h1>
+							</a>
+						</article>
+					</div>
+					<!-- .col-6 -->
+					{% endfor %}
+				</div>
+				<!-- .row -->
+			</div>
+			<!-- .wysiwyg -->
+		</div>
+		<!-- .container -->
+	</footer>
+
+</article>

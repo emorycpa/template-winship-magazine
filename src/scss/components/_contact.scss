@@ -1,0 +1,8 @@
+.contact__entry:not(:last-of-type) {
+    border-bottom: solid 1px $border-color;
+}
+
+// Shift vertical position so baseline aligns with body text in the next column
+.contact__label {
+    margin-top: .15em;
+}

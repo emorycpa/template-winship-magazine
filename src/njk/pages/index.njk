@@ -1,0 +1,17 @@
+{% extends "layout.njk" %} 
+{% set pageTitle = 'Home' %}
+{% block head %}
+<title>{{ pageTitle}} | {{ siteName }}</title>
+{% endblock %} 
+
+{% block content %}
+<main>
+
+{% include "partials/hero/hero.njk" %}
+
+{% include "partials/sections/card-row.njk" %}
+
+{% include "partials/sections/icon-row.njk" %}
+
+</main>
+{% endblock %}

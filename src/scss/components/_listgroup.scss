@@ -1,0 +1,53 @@
+// Active item highlighting
+.list-group-item.active {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    caption {
+        color: theme-color("light"); // Override default colors for contrast
+    }
+    &:hover {
+        background-color: darken(theme-color("secondary"), 7); // Match secondary button hover color
+    }
+}
+
+// Match body text color for light list group items in all states
+.list-group-item-light,
+.list-group-item-light.list-group-item-action:hover,
+.list-group-item-light.list-group-item-action:focus {
+    color: $body-color;
+}
+
+// Item background color hover transition
+.list-group-item {
+    transition: $btn-transition;
+}
+
+// Title or header for a set of list group items
+.list-group-title {
+    background-color: gray("100");
+}
+
+// Compact list group with reduced vertical padding
+.list-group-sm .list-group-item {
+    padding: .5rem 1rem;
+}
+
+// Striped list groups just like tables
+.list-group--striped .list-group-item {
+    &:nth-of-type(odd) {
+        background-color: $pale-blue;
+    }
+    &:nth-of-type(even) {
+        background-color: theme-color("light");
+    }
+}

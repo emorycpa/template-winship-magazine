@@ -1,0 +1,41 @@
+.calendar {
+    .calendar__item {
+        &:nth-of-type(odd) .calendar__date {
+            background-color: theme-color("secondary");
+        }
+        &:nth-of-type(even) .calendar__date {
+            background-color: darken(theme-color("secondary"), 5);
+        }
+        &:nth-of-type(odd) .calendar__details {
+            background-color: theme-color("light");
+        }
+        &:nth-of-type(even) .calendar__details {
+            background-color: $pale-blue;
+        }
+    }
+    .calendar__date {
+        font-size: 1.375rem;
+        line-height: $headings-line-height;
+        text-align: center;
+        color: theme-color("light");
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid darken(theme-color("secondary"), 8);
+        small {
+            font-size: .875rem;
+            line-height: 1.25;
+            display: block;
+        }
+    }
+    .calendar__details {
+        line-height: 1.3;
+        border-bottom: 1px solid $border-color;
+        padding: 1rem;
+        a {
+            color: $emory-blue;
+            &:hover {
+                color: darken(theme-color("secondary"), 5);
+            }
+        }
+    }
+}

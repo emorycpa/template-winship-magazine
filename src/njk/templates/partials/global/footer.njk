@@ -1,0 +1,133 @@
+<footer id="siteFooter" class="site-footer">
+
+    <!-- Emory Shield and Ribbons -->
+    <div class="site-footer__ribbons" role="presentation">
+        <div class="site-footer__ribbons-fold">
+            <span></span>
+        </div>
+        <div class="site-footer__ribbons-yellow"></div>
+        <div class="site-footer__ribbons-blue"></div>
+    </div>
+    <!-- .site-footer__ribbons -->
+    
+    <a href="#">
+        {% include "partials/svg/eu-logo-footer.njk" %}
+    </a>
+
+    <div class="section pb-4 bg-primary">
+
+        <div class="container pt-5">
+
+            <!-- Site Name -->
+            <div class="site-footer__name text-center mb-5">
+                <a href="#">{{ siteName }}</a>
+            </div>
+            <!-- .footer-name -->
+
+            <!-- Large Icon Navigation -->
+            <nav class="nav nav-pills nav-buttons flex-column flex-md-row nav-justified text-uppercase mb-5">
+                {% for i in range(0, 4) -%}
+                <a class="nav-item nav-link" href="#">
+                    <span class="fas fa-asterisk" aria-hidden="true"></span>
+                    Menu Item
+                </a>
+                {% endfor %}
+            </nav>
+
+            <!-- Mega Menu -->
+            <div class="row flex-sm-row-reverse">
+
+                <!-- Additional Menus -->
+                <div class="site-footer__menus col-lg-6 mb-4">
+                    <div class="row">
+                        {% for i in range(0, 2) -%}
+                        <div class="col-12 col-sm-6 mb-3">
+                            <ul class="nav flex-column fa-ul" aria-label="Footer Menu Title">
+                                {% for i in range(0, 6) -%}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mega footer link</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- .col-sm-6 -->
+                        {% endfor %}
+                    </div>
+                    <!-- .row -->
+                </div>
+
+                <!-- Logo, Address, Social Media -->
+                <div class="col-12 col-lg-6 mb-3">
+                    <a href="#">
+                        <img src="https://placehold.it/350x175/0d7cba/ffffff" alt="placeholder" class="img-fluid mb-2">
+                    </a>
+                    <address>
+                        <div class="wysiwyg">
+                            <p>
+                                <strong>Name of Company or Org.</strong>
+                                <br>
+                                <a href="#">12345 Street Name
+                                    <br> Atlanta,
+                                    <abbr title="Georgia">GA</abbr> 20304</a>
+                            </p>
+                            <small>
+                                <a href="mailto:#">
+                                    <span class="fas fa-envelope" aria-hidden="true"></span> email@emory.edu</a>
+                                <br>
+                                <a href="mailto:#">
+                                    <span class="fas fa-envelope" aria-hidden="true"></span> email2@emory.edu</a>
+                                <br>
+                                <a href="tel:#">
+                                    <span class="fas fa-phone" aria-hidden="true"></span> (123) 456-7890</a>
+                            </small>
+                        </div>
+                        <!-- .wysiwyg -->
+                    </address>
+                    {% include "partials/snippets/share-buttons-white-small.njk" %}
+                </div>
+                <!-- .col-lg-6 -->
+
+            </div>
+            <!-- .row -->
+
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .section -->
+
+</footer>
+<!-- #siteFooter -->
+<div id="postFooter" class="site-post-footer">
+
+    <div class="container py-2 text-center">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <small>Copyright &copy;
+                    <a href="#">Emory University</a>
+                </small>
+            </div>
+            <!-- .col-sm-4 -->
+
+            <div class="col-sm-4">
+                <small>
+                    <a href="#">EO/AA Statement</a> |
+                    <a href="#">Copyright</a>
+                </small>
+            </div>
+            <!-- .col-sm-4 -->
+
+            <div class="col-sm-4">
+                <a class="font-weight-bold" href="#">Back to top
+                    <span class="fas fa-angle-double-up" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .col-sm-4 -->
+
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+
+</div>
+<!-- #postFooter -->

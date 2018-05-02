@@ -1,0 +1,32 @@
+{% if (pageTitle == 'Home') or (pageTitle == 'Landing Page') %}
+    {% set overlay = " overlay" %} 
+{% endif %}
+
+{% if pageTitle== 'Landing Page' %}
+    {% set parallax = " hero--parallax" %}
+{% endif %}
+
+{% if (pageTitle != 'Home') %}
+    {% include "partials/snippets/breadcrumbs.njk" %}
+{% endif %}
+
+<section class="hero{{ parallax }}{{ overlay }}" aria-label="Hero">
+
+    {% if (pageTitle == 'Home') or (pageTitle == 'Landing Page') %}
+    <div class="container pt-4 pb-5 d-flex h-100 align-items-center text-white">
+        <div class="wysiwyg">
+            <h1 class="hero__title">{{ pageTitle }}</h1>
+            <hr class="divider-ornamental align-left">
+            <p class="lead">Dramatically synergize parallel core competencies with resource sucking architectures. Continually revolutionize
+                standardized web services for real-time niches. Completely empower value-added expertise after global communities.
+                Dynamically seize efficient methodologies via technically sound.</p>
+            <a href="#" class="btn btn-lg btn-outline-light">Learn More
+                <span class="fas fa-angle-double-right" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- .wysiwyg -->
+    </div>
+    <!-- .container -->
+    {% endif %}
+
+</section>

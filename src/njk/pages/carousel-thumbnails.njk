@@ -1,0 +1,48 @@
+{% extends "layout.njk" %}
+{% set pageTitle = 'Carousel with Thumbnails' %}
+{% block head %}
+<title>{{ pageTitle }} | {{ siteName }}</title>
+{% endblock %}
+
+{% block content %}
+<main>
+
+{% include "partials/snippets/breadcrumbs.njk" %}
+
+<section aria-label="Carousel with Thumbnails">
+
+    <h1 class="sr-only">{{ pageTitle }}</h1>
+
+    {% include "partials/snippets/carousel-thumbnails.njk" %}
+
+</section>
+
+<section class="section" aria-label="Carousel with Thumbnails Documentation">
+    <div class="container">
+        <div class="wysiwyg">
+            <h2>Bootstrap Carousel with Thumbnail Indicators</h2>
+            <p class="lead">The carousel above has a list of thumbnails beneath using the bootstrap Indicators.</p>
+            <p>In order to achieve this effect, be sure to add the class <code>.carousel-indicators-thumbs</code> to the carousel like so:</p>
+            <pre>
+            &lt;ol class="carousel-indicators carousel-indicators-thumbs"&gt;
+            </pre>
+
+            <p>Inside each <code>&lt;li&gt;</code>, add a 100x100 thumbnail version of the slide like so:</p>
+            <pre>
+            &lt;ol class="carousel-indicators carousel-indicators-thumbs"&gt;
+                &lt;li ...&gt;
+                    &lt;img src="100x100.jpg"&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+            </pre>
+
+            <div class="alert alert-info">
+                <strong>Important:</strong> Move the Previous and Next indicator arrows <em>inside</em> <code>.carousel-inner</code> when using the carousel with thumbnails. This ensures proper alignment of arrows relative to the slides rather than to the entire stage including the Thumbnail indicators.
+            </div><!-- .alert -->
+
+        </div><!-- .wysiwyg -->
+    </div><!-- .container -->
+</section>
+
+</main>
+{% endblock %}

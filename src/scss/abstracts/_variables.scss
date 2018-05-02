@@ -1,0 +1,69 @@
+/*
+ * 
+ * EMORY BRAND COLOR PALETTE - DO NOT CHANGE!!!
+ * "AA compliant" means color is WCAG 2.0 AA compliant for text on a white background, or as a background for white text
+ * 
+*/
+
+// Primary
+$emory-blue:        #012169; // AA compliant
+$medium-blue:       #0033a0; // AA compliant
+$light-blue:        #007dba; // AA compliant
+$yellow:            #f2a900; // Not AA compliant
+$gold:              #b58500; // AA compliant over 18px size
+$metallic-gold:     #8d702a; // AA compliant
+
+// Secondary
+$cyan:              #00aeef; // Not AA compliant
+$sky-blue:          #41b6e6; // Not AA compliant
+$teal:              #487f84; // AA compliant
+$kelly-green:       #348338; // AA compliant
+$sea-green:         #006c5b; // AA compliant
+$olive:             #5c8118; // AA compliant
+$orange:            #c35413; // AA compliant
+$red:               #da291c; // AA compliant
+$magenta:           #c6007e; // AA compliant
+$purple:            #6558b1; // AA compliant
+$grape:             #6d2077; // AA compliant
+
+// Neutrals
+$black:             #101820; // AA compliant
+$cool-gray-5:       #b1b3b3; // Not AA compliant
+$cool-gray-2:       #d0d0ce; // Not AA compliant
+$cool-gray-1:       #d9d9d6; // Not AA compliant
+
+/*
+ * 
+ * SUPPLEMENTAL COLORS
+ * Not part of the Emory brand palette
+ * 
+*/
+
+// Light pastel tints of brand colors
+$pale-blue:          #ebf5f9; // Not AA compliant
+$primary-light:		#b0d8fb; // Not AA compliant
+$secondary-light:	#caeeff; // Not AA compliant
+$success-light:		#cfebd7; // Not AA compliant
+$danger-light:		#fbd3d0; // Not AA compliant
+
+// Grays
+$cool-gray-3:			#C8C9C7; // Not AA compliant
+$cool-gray-4:			#BBBCBC; // Not AA compliant
+$cool-gray-6:			#A7A8AA; // Not AA compliant
+$cool-gray-7:			#97999B; // Not AA compliant
+$cool-gray-8:			#888B8D; // AA compliant over 18px size
+$cool-gray-9:			#75787B; // AA compliant over 18px size
+$cool-gray-10:		#63666A; // AA compliant
+$cool-gray-11:		#53565A; // AA compliant
+
+
+/*
+ * 
+ * EMORY BRAND FONT STACKS
+ * 
+*/
+
+$noto-sans:          'Noto Sans', sans-serif;
+$body-font:			$noto-sans;
+$spectral:          'Spectral', serif;
+$barlow-condensed:   'Barlow Condensed', sans-serif;

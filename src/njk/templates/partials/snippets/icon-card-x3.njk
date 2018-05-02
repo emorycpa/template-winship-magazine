@@ -1,0 +1,21 @@
+<!-- Icon Rows -->
+<div class="card-deck my-5">
+    {% for i in range(0, 3) -%}
+    <div class="card">
+        <div class="card-body">
+            <div class="text-primary text-uppercase h1">
+                <div class="fas fa-asterisk" aria-hidden="true"></div>
+                <h3>Card title</h3>
+            </div>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+                little bit longer.</p>
+            <a href="#">Go somewhere
+                <span class="fas fa-angle-double-right" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- .card-body -->
+    </div>
+    <!-- .card -->
+    {% endfor %}
+</div>
+<!-- .card-deck -->

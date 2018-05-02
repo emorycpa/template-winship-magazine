@@ -1,0 +1,31 @@
+<!-- large and up -->
+<form id="searchDesktop" class="form my-4 form-lg-inline ml-lg-auto my-lg-0">
+
+    <div class="input-group">
+
+        <!-- Search input text box -->
+        <input type="text" class="form-control d-lg-none" placeholder="Enter keywords..." aria-label="Search" id="searchInput">
+
+        <div class="input-group-append">
+            <!-- Search submit button -->
+            <input type="submit" name="searchSubmit" value="Search" class="btn btn-primary d-lg-none" id="searchSubmit">
+
+            <!-- Toggle to reveal search input and submit button -->
+            <button 
+                id="searchToggle"
+                class="site-header__search-toggle btn btn-secondary d-none d-lg-block"
+                type="button"
+                title="Toggle search box"
+                data-target="#searchSubmit"
+                aria-hidden="true"
+                aria-controls="searchSubmit">
+                <span class="fas fa-search"></span>
+                <span class="sr-only">Toggle search box</span>
+            </button>
+        </div>
+        <!-- .input-group-append -->
+
+    </div>
+    <!-- .input-group -->
+
+</form>

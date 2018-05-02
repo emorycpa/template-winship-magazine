@@ -1,0 +1,175 @@
+// Base button overrides
+.btn {
+    font-size: 1.125rem;
+    white-space: normal; // Let text wrap if it needs to
+    // Global appearance of icons in buttons
+    &:not(#searchToggle) {
+        .svg-inline--fa {
+            font-size: 75%;
+            vertical-align: baseline;
+            margin-right: .125rem;
+        }
+    }
+}
+
+// Reduce margin between block buttons
+.btn-block+.btn-block {
+    margin-top: 1px;
+}
+
+// Button fill-in effect
+[class*=" btn-outline-"] {
+    position: relative;
+    z-index: +1; // Keeps z-index:-1 hover pseudo element from disappearing if parent container has a background
+}
+
+[class*=" btn-outline-"]::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background-color: inherit;
+    transform-origin: left;
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+[class*=" btn-outline-"]:hover::after {
+    width: 100%;
+}
+
+// Adjusted contextual button colors
+.btn-primary,
+.btn-secondary {
+    // Using the same hover color for primary and secondary buttons looks more orderly
+    &:hover {
+        background-color: darken(theme-color("secondary"), 7);
+        border-color: darken(theme-color("secondary"), 7);
+    }
+}
+
+.btn-primary {
+    &:disabled {
+        &:hover {
+            background-color: theme-color("primary");
+            border-color: theme-color("primary");
+        }
+    }
+}
+
+.btn-secondary {
+    &:disabled {
+        &:hover {
+            background-color: theme-color("secondary");
+            border-color: theme-color("secondary");
+        }
+    }
+}
+
+.btn-dark {
+    &:hover {
+        background-color: lighten(theme-color("dark"), 20);
+        border-color: lighten(theme-color("dark"), 20);
+    }
+    &:disabled {
+        &:hover {
+            background-color: theme-color("dark");
+            border-color: theme-color("dark");
+        }
+    }
+}
+
+.btn-warning {
+    &:hover,
+    &.active {
+        color: $body-color;
+    }
+}
+
+.btn-outline-warning {
+    color: darken($gold, 7%);
+    border-color: $gold;
+    &:disabled {
+        color: darken($gold, 10%);
+    }
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):hover,
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show>.btn-outline-light.dropdown-toggle {
+    color: theme-color("secondary");
+}
+
+// Custom icon colors
+.btn-secondary,
+.btn-outline-secondary.active,
+.btn-info,
+.btn-outline-info.active {
+    .svg-inline--fa {
+        color: lighten($sky-blue, 15%);
+    }
+}
+
+.btn-success,
+.btn-outline-success.active {
+    .svg-inline--fa {
+        color: lighten(theme-color("success"), 40%);
+    }
+}
+
+.btn-outline-success {
+    .svg-inline--fa {
+        color: lighten(theme-color("success"), 15%);
+    }
+}
+
+.btn-danger,
+.btn-outline-danger.active {
+    .svg-inline--fa {
+        color: lighten(theme-color("danger"), 35%);
+    }
+}
+
+.btn-outline-danger {
+    .svg-inline--fa {
+        color: lighten(theme-color("danger"), 18%);
+    }
+}
+
+.btn-warning,
+.btn-outline-warning.active {
+    .svg-inline--fa {
+        color: darken($gold, 5%);
+    }
+}
+
+.btn-outline-warning {
+    .svg-inline--fa {
+        color: lighten($gold, 5%);
+    }
+}
+
+// Small and large button sizes
+.btn.btn-sm,
+.btn-group-sm>.btn {
+    font-size: .875rem;
+}
+
+.btn.btn-lg,
+.btn-group-lg>.btn {
+    font-size: 1.25rem;
+}
+
+// Don't visibly change disabled button link on hover 
+.btn-link {
+    &:disabled,
+    &.disabled {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

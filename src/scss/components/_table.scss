@@ -1,0 +1,39 @@
+// Darker links in tables to contrast with toned backgrounds
+.table,
+.table .bg-warning,
+.table-dark .bg-warning,
+.table .bg-light,
+.table-dark .bg-light {
+    a {
+        color: theme-color("primary");
+        &:hover {
+            text-decoration: none;
+            color: darken(theme-color("primary"), 20);
+        }
+    }
+}
+
+// Light links in dark table cells
+.table-dark,
+.table-active {
+    a {
+        color: theme-color("light");
+        &:hover {
+            color: theme-color("light");
+        }
+    }
+}
+
+// Light links for contrast in active table cells
+.table-active,
+.table-active>th,
+.table-active>td {
+    color: theme-color("light");
+}
+
+// Background color hover transition
+tr,
+th,
+td {
+    transition: $btn-transition;
+}

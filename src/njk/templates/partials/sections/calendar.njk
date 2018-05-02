@@ -1,0 +1,46 @@
+<section class="section" aria-label="Calendar">
+    <div class="container">
+
+        <div class="wysiwyg">
+            <h1>Example Calendar</h1>
+            <hr class="divider-ornamental">
+            <br>
+        </div>
+        <!-- .wysiwyg -->
+
+        <div class="row">
+
+            <div class="col-md-6 mb-5 mb-md-0">
+                {% include "partials/snippets/calendar.njk" %}
+            </div>
+            <!-- .col-md-6 -->
+
+            <div class="col-md-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-primary h4 mb-0">Download This Calendar</h2>
+                    </div>
+                    <!-- .card-header -->
+                    <div class="list-group list-group-flush">
+                        {% for i in range(0, 4) -%}
+                        <a href="#" class="list-group-item list-group-item-action">Spring 2017
+                            <span class="fas fa-file-pdf" title="PDF"></span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Summer 2017 &#8211; Fall 2017
+                            <span class="fas fa-file-pdf" title="PDF"></span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    <!-- .list-group -->
+                </div>
+                <!-- .card -->
+
+            </div>
+            <!-- .col-md-6 -->
+
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</section>

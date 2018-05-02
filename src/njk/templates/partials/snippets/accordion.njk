@@ -1,0 +1,85 @@
+<div id="accordion" class="accordion mb-5">
+
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h3 class="mb-0">
+                <button class="accordion__toggle btn btn-block text-left p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                </button>
+            </h3>
+        </div>
+        <!-- .card-header -->
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="wysiwyg">
+                    {% include "partials/snippets/paragraph.njk" %}
+                    <ul class="list-chevron">
+                        {% for i in range(0, 5) -%}
+                        <li>Chevron list item</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- .wysiwyg -->
+            </div>
+            <!-- .card-body -->
+        </div>
+        <!-- .collapse -->
+    </div>
+    <!-- .card -->
+
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h3 class="mb-0">
+                <button class="accordion__toggle btn collapsed btn-block text-left p-3" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                </button>
+            </h3>
+        </div>
+        <!-- .card-header -->
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="wysiwyg">
+                    {% include "partials/snippets/paragraph.njk" %}
+                    <img src="https://placehold.it/200" class="img-fluid float-sm-left mr-3" alt="placeholder"> {% for i in range(0, 3) -%} {% include "partials/snippets/paragraph.njk" %} {% endfor %}
+                </div>
+                <!-- .wysiwyg -->
+            </div>
+            <!-- .card-body -->
+        </div>
+        <!-- .collapse -->
+    </div>
+    <!-- .card -->
+
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h3 class="mb-0">
+                <button class="accordion__toggle btn collapsed btn-block text-left p-3" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                </button>
+            </h3>
+        </div>
+        <!-- .card-header -->
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <div class="wysiwyg">
+                    <h4>A level 4 heading</h4>
+                    {% include "partials/snippets/paragraph.njk" %}
+                    <ul class="list-chevron">
+                        {% for i in range(0, 5) -%}
+                        <li>Chevron list item</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- .wysiwyg -->
+            </div>
+            <!-- .card-body -->
+        </div>
+        <!-- .collapse -->
+    </div>
+    <!-- .card -->
+
+</div>
+<!-- .accordion -->

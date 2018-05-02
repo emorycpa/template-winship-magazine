@@ -1,0 +1,325 @@
+<section class="section" aria-label="Biography">
+	<div class="container">
+
+		<div class="wysiwyg">
+			<h1 class="mb-4 mb-md-5">
+				Johnny J. Smith, PhD
+				<small class="bio__title d-block mt-3">Professor of Template Arts</small>
+			</h1>
+		</div>
+		<!-- .wysiwyg -->
+
+		<div class="row">
+			
+			<div class="col-md-4 col-lg-3 mb-4">
+				<div class="wysiwyg">
+					<img class="img-fluid w-100" src="https://placehold.it/1020" alt="Johnny J. Smith, PhD">
+					<a href="#" class="btn btn-primary btn-block text-left">
+						<span class="fas fa-file-alt" aria-hidden="true"></span> View online C/V</a>
+					<a href="#" class="btn btn-primary btn-block text-left">
+						<span class="fas fa-external-link-alt" aria-hidden="true"></span> Visit Website</a>
+					<h2 class="h4 mt-3 mb-0">Contact Information</h2>
+					<address>
+						<div class="h5 mt-3 mb-2">Mailing Address</div>
+						<a href="#">Emory University
+							<br> Street Name and #
+							<br> Atlanta,
+							<abbr title="Georgia">GA</abbr>
+						</a>
+						<div class="h5 mt-3 mb-2">Phone</div>
+						<a href="tel:#">555-555-5555 ext. 123</a>
+						<div class="h5 mt-3 mb-2">Fax</div>
+						<a href="tel:#">555-555-5555</a>
+					</address>
+					<h3 class="h5 mt-3 mb-2">Additional Websites</h3>
+					<ul>
+						{% for i in range(0, 3) -%}
+						<li>
+							<a href="#">www.website.com</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<!-- .wysiwyg -->
+			</div>
+			<!-- .col-md-4 -->
+
+			<div class="col-md-8 offset-lg-1">
+				<div class="wysiwyg">
+					<h2 class="h3 mb-4">Current Academic Appointments</h2>
+					<ul>
+						{% for i in range(0, 4) -%}
+						<li>Executive Director, Center of Templates and Template Accessories</li>
+						{% endfor %}
+					</ul>
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">My Jobs</h2>
+					<ul>
+						{% for i in range(0, 3) -%}
+						<li>Vice Chair, Department of Grids and Columns</li>
+						{% endfor %}
+					</ul>
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">Overview</h2>
+					{% for i in range(0, 4) -%}
+						{% include "partials/snippets/paragraph.njk" %}
+					{% endfor %}
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">Credentials</h2>
+					<h3 class="h4">Past Academic Appointments</h3>
+					<ul>
+						{% for i in range(0, 12) -%}
+						<li>Professor of Template Arts, Emory University School of Templates</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Past Non Academic Employments</h3>
+					<ul>
+						{% for i in range(0, 12) -%}
+						<li>Chair, Board of Closing Tag Validation</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Education</h3>
+					<ul>
+						{% for i in range(0, 3) -%}
+						<li>PhD, Underwater Template Enthusiasm, Emory University, Atlanta,
+							<abbr title="Georgia">GA</abbr>, 2001</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Post Graduate Training</h3>
+					<ul>
+						{% for i in range(0, 4) -%}
+						<li>Postdoctoral Fellowship, Harvard Templatal School, 2008-2009</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Awards and Honors</h3>
+					<ul>
+						{% for i in range(0, 12) -%}
+						<li>Animated GIF Banner of the Day Award</li>
+						{% endfor %}
+					</ul>
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">Professional Service Activities</h2>
+					<h3 class="h4">Committee Memberships</h3>
+					<ul>
+						{% for i in range(0, 10) -%}
+						<li>Committee of Divs Member, 2015–present</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Society and Professional Memberships</h3>
+					<ul>
+						{% for i in range(0, 10) -%}
+						<li>Society for Appreciation of Templates, Member, 2015–present</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Community Outreach</h3>
+					<ul>
+						{% for i in range(0, 10) -%}
+						<li>Template Scouts of Greater Atlanta, Troop Leader, 2015–present</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Editorship</h3>
+					<ul>
+						{% for i in range(0, 5) -%}
+						<li>Template Fancy Magazine, 2015–present</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Editorial Boards</h3>
+					<ul>
+						{% for i in range(0, 5) -%}
+						<li>Clinical Templating Trends, Editorial Board Member, 2015–present</li>
+						{% endfor %}
+					</ul>
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">Educational Activities</h2>
+					<h3 class="h4">Education Leadership Roles</h3>
+					<ul>
+						{% for i in range(0, 4) -%}
+						<li>Ethical Templating Development Course</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Courses Taught</h3>
+					<ul>
+						{% for i in range(0, 8) -%}
+						<li>Lecturer, "Let Me Talk About Templates" Program, 2007</li>
+						{% endfor %}
+					</ul>
+
+					<hr class="divider-ornamental">
+
+					<h2 class="h3 mb-4">Research</h2>
+					<h3 class="h4">Research Interests</h3>
+					<ul class="list-unstyled">
+						{% for i in range(0, 2) -%}
+						<li>
+							<h4 class="h5 mb-0">Template-Human Hybrids</h4>
+							{% include "partials/snippets/paragraph.njk" %}
+						</li>
+						{% endfor %}
+					</ul>
+					<h3 class="h4">Publications</h3>
+
+					<hr class="divider-ornamental w-100 m-0">
+
+					<ul class="list-group list-group--striped">
+						{% for i in range(0, 10) -%}
+						<li class="list-group-item">
+							Proactively transform orthogonal web services vis-a-vis clicks-and-mortar process improvements. Globally procrastinate user
+							<a href="#">friendly products</a> through sustainable leadership skills. Continually mesh stand-alone partnerships for sustainable
+							intellectual capital. Assertively disseminate unique resources.
+						</li>
+						{% endfor %}
+					</ul>
+
+					<div class="row my-3">
+						
+						<div class="col-lg-6 mb-3 d-flex align-items-lg-center font-italic">
+							Showing 1 to 10 of 25 publications
+						</div>
+						<!-- .col-lg-6 -->
+
+						<div class="col-lg-6">
+							<ul class="pagination justify-content-lg-end">
+								<li class="page-item disabled">
+									<span class="page-link">Previous</span>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">1</a>
+								</li>
+								<li class="page-item active">
+									<span class="page-link">
+										2
+										<span class="sr-only">(current)</span>
+									</span>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">3</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</div>
+						<!-- .col-lg-6 -->
+
+					</div>
+					<!-- .row -->
+				</div>
+				<!-- .wysiwyg -->
+			</div>
+			<!-- .col-md-4 -->
+		</div>
+		<!-- .row -->
+
+		<!--<div class="wysiwyg">
+            <h1>Johnny J. Smith, PhD <small>Professor of Template Arts</small></h1>
+            <p class="lead">School of Templatizing</p>
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <hr class="divider-ornamental">
+                    <p class="lead">
+                        Executive Director<br>
+                        <small>Center of Templates and Template Accessories</small>
+                    </p>
+                    <address>
+                        Office: 1234 Template Center<br>
+                        Phone: <a href="tel:#">(987) 654-3210</a><br>
+                        Email: <a href="mailto:#">jjsmith@emory.edu</a>
+                    </address>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top" src="https://placehold.it/285" alt="Johnny J. Smith, PhD">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-sm btn-link">View online C/V <span class="fas fa-external-link-alt" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <h2>Biography</h2>
+                    <hr class="divider-ornamental">
+                    {% for i in range(0, 3) -%}
+                    {% include "partials/snippets/paragraph.njk" %}
+                    {% endfor %}
+                    
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Contact Information</h2>
+
+                    <address>
+                        <h3>Mailing Address</h3>
+                        Emory University<br>
+                        Street Name and #<br>
+                        Atlanta, <abbr title="Georgia">GA</abbr>
+                    </address>
+
+                    <h3>Additional Websites</h3>
+                    <ul class="list-chevron">
+                    {% for i in range(0, 3) -%}
+                    <li><a href="#">www.website.com</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Research</h2>
+                    <hr class="divider-ornamental">
+                    {% for i in range(0, 2) -%}
+                    {% include "partials/snippets/paragraph.njk" %}
+                    {% endfor %}
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Education</h2>
+                    <ul class="list-chevron">
+                    {% for i in range(0, 3) -%}
+                    <li>PhD, Underwater Template Enthusiasm, Emory University, Atlanta, <abbr title="Georgia">GA</abbr>, 2001</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Publications</h2>
+                    <ul class="list-chevron">
+                    {% for i in range(0, 3) -%}
+                    <li><a href="#">Name of Publication</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Teaching</h2>
+                    <ul class="list-chevron">
+                    {% for i in range(0, 6) -%}
+                    <li><a href="#">Name of Course</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+		-->
+		
+	</div>
+	<!-- .wysiwyg -->
+</section>
