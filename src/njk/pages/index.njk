@@ -1,5 +1,5 @@
 {% extends "layout.njk" %} 
-{% set pageTitle = 'Fall 2017' %}
+{% set pageTitle = 'June 2018' %}
 {% block head %}
 <title>{{ pageTitle }} | {{ siteTitle }}</title>
 {% endblock %} 
@@ -7,9 +7,86 @@
 {% block content %}
 <main>
 
-{% include "partials/sections/card-row.njk" %}
-
-{% include "partials/sections/icon-row.njk" %}
+<div class="container">
+	<div class="row">
+		<div class="col-12 pt-5 pb-3">
+			<h1 class="lead">June 2018 | Volume 1 | Issue 1</h1>
+		</div>
+	</div>
+	<div class="row flex-column-reverse flex-md-row-reverse">
+		<div class="col-12 col-md-4">
+			<h2 class="h4">Cover Story</h2>
+			<h3 class="h2"><a href="article.html">Aliquam Lobortis, Purus Viverra</a></h3>
+			<p>Hendrerit vestibulum, ligula arcu tempor elit, at molestie metus orci ut metus.</p>
+		</div>
+		<div class="col-12 col-md-8">
+			<figure>
+				<a href="article.html"><img src="http://via.placeholder.com/600x400&text=Image" alt="" class="w-100 img-fluid"></a>
+			</figure>
+		</div>
+	</div>
+	<div class="row py-5">
+		<div class="col-12 col-md-6">
+			<div class="row flex-column-reverse flex-lg-row-reverse">
+				<div class="col-12 col-lg-6">
+					<h2 class="h3"><a href="">Donec at Nunc Sit Amet</a></h2>
+					<p>Vivamus hendrerit nisi in dignissim cursus.</p>
+				</div>
+				<div class="col-12 col-lg-6">
+					<figure>
+						<a href="article.html"><img src="http://via.placeholder.com/600x400&text=Image" alt="" class="w-100 img-fluid"></a>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-md-6">
+			<div class="row flex-column-reverse flex-lg-row-reverse">
+				<div class="col-12 col-lg-6">
+					<h2 class="h3"><a href="">Nulla Malesuada Sed</a></h2>
+					<p>Aliquam suscipit elit lectus, et interdum urna blandit id.</p>
+				</div>
+				<div class="col-12 col-lg-6">
+					<figure>
+						<a href="article.html"><img src="http://via.placeholder.com/600x400&text=Image" alt="" class="w-100 img-fluid"></a>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row pb-5">
+		<div class="col-12 col-lg-3">
+			<h2 class="h4">Briefs</h2>
+			<figure>
+				<img src="http://via.placeholder.com/600x400&text=Image" alt="" class="w-100 img-fluid">
+			</figure>
+			<ul class="list-group">
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+				<li class="list-group-item"><a href="article.html" class="font-weight-bold">Aliquam Sed Tellus Non Lorem Condimentum Accumsan</a></li>
+			</ul>
+		</div>
+		<div class="col-12 col-lg-6">
+			<h2 class="h4">Features</h2>
+		</div>
+		<div class="col-12 col-lg-3">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-lg-12 mb-3">
+					<a href="" class="btn btn-lg btn-outline-secondary d-block text-left">
+						Advertise in Emory GYNOB Magazine
+					</a>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-12 mb-3">
+					<a href="" class="btn btn-lg btn-outline-secondary d-block text-left">
+						Give Now
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </main>
 {% endblock %}
