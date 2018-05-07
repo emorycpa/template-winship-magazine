@@ -1,3 +1,3 @@
-# Emory University - Winship Magazine
+# Emory University - GYNOB Magazine
 
-Rough sketch of Winship Magazine in the Emory Bootstrap 4 standard template.
+Rough sketch of GYNOB Magazine in the Emory Bootstrap 4 standard template.
