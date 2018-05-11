@@ -4,10 +4,11 @@
   "description": "The default template used across Emory University web domains.",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^8.4.1",
     "bootstrap": "4.1.1",
-    "browser-sync": "^2.23.6",
-    "chalk": "^2.3.1",
+    "browser-sync": "^2.24.4",
+    "chalk": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "gulp": "3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -23,7 +24,7 @@
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9",
-    "typescript": "^2.5.2"
+    "typescript": "^2.8.3"
   },
   "devDependencies": {
     "gulp-inline-source": "^3.1.0"
