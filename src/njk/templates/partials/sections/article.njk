@@ -1,32 +1,14 @@
-{% include "partials/snippets/breadcrumbs.njk" %}
-
 <article class="article">
-
-	<header class="hero overlay article__hero">
-		<div class="container pt-4 pb-5 d-flex h-100 align-items-center text-white">
-			<div>
-				<h1 class="display-3 article__title">News Article that has a Medium Length Title</h1>
-				<hr class="divider-ornamental align-left">
-				<p class="lead">Insert article excerpt or lead text here to make an impact. The hero image can be a custom article "featured image".
-					Article content areas duplicate current news center structure.</p>
-			</div>
-		</div>
-		<!-- .container -->
-	</header>
 
 	<div class="section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
-
+					<h1>Aliquam Lobortis, Purus Viverra</h1>
 					<div class="article__meta pb-3 mb-3">
 						<small>
 							<span class="article__author">
-								By Johnny J. Smith
-							</span>
-							<span class="article__datetime">
-								<!-- Date and Time -->
-								<time datetime="2018-05-15T09:00">May 15, 2018 @ 9:00 AM</time>
+								By Johnny J. Smith, Illustrations by Mandy M. Myers
 							</span>
 						</small>
 					</div>
@@ -34,30 +16,28 @@
 
 					<figure class="figure mb-5">
 						<img src="https://placehold.it/1520x855" alt="placeholder" class="figure-img img-fluid">
-						<figcaption class="figure-caption">Lead Photo: It's important to add a caption to a news story image to give the reader context.</figcaption>
+						<figcaption class="figure-caption">Sed vitae rhoncus elit, eu congue risus. Aenean vehicula metus odio, et vulputate sem pharetra ut. Ut varius semper ante, quis lobortis odio malesuada quis. Integer diam odio, congue et lacus sit amet, luctus aliquam nulla. </figcaption>
 					</figure>
 
 					<div class="wysiwyg">
 						
-						<p class="lead">This is the first sentence of the news article, with a different style using <code>.lead</code> text. Optional.</p>
+						<p class="lead">Proin ac lectus viverra, semper ipsum ac, facilisis lectus. Nam auctor dolor dolor, eu ultrices ante hendrerit a. Nulla ac nulla rhoncus, faucibus urna non, porttitor sapien.</p>
 
-						{% for i in range(0, 3) -%}
-							{% include "partials/snippets/paragraph.njk" %}
-						{% endfor %}
+						<p>Nunc sed consectetur justo. Aenean pulvinar quam vehicula est tristique euismod. Integer vitae ornare velit, et elementum ex. Morbi non ullamcorper eros. Ut ultrices semper felis, sodales fringilla tellus dapibus a. Nullam vel mauris sed ex ornare elementum id vitae nulla. Mauris dolor massa, sodales quis eros quis, tincidunt cursus est. Praesent vitae diam a dui pellentesque dapibus ut sit amet erat. Etiam consequat nunc non libero rhoncus maximus. Quisque dapibus tellus quis leo vestibulum, nec dapibus leo commodo. Maecenas dolor sem, pulvinar a feugiat vitae, bibendum in orci. Sed hendrerit vehicula aliquet.<p>
+						<p>Sed ac porttitor metus, vitae aliquam nulla. Maecenas ullamcorper augue in nisi rhoncus, tincidunt luctus velit luctus. Fusce dignissim dictum justo. Nunc turpis odio, scelerisque ut nulla id, ultrices mattis lorem. Sed et massa a eros efficitur facilisis at nec magna. Fusce sem turpis, varius in justo a, venenatis rhoncus purus. Nam rutrum sit amet justo ut sagittis. Curabitur posuere condimentum aliquam. Sed vel convallis dolor. Vestibulum tellus velit, consectetur quis interdum vitae, euismod quis orci. Morbi nec sagittis felis.</p>
 
-						<h2>And this section has some floated images</h2>
+						<h2>Nunc Sed Consectetur Justo</h2>
 						<figure class="figure float-sm-left mr-3">
 							<img class="img-fluid" src="https://placehold.it/250" alt="placeholder">
-							<figcaption class="figure-caption">Caption for the article image.</figcaption>
+							<figcaption class="figure-caption">Etiam viverra, enim vitae posuere consectetur, sem turpis volutpat massa.</figcaption>
 						</figure>
 						
-						{% for i in range(0, 4) -%}
-							{% include "partials/snippets/paragraph.njk" %}
-						{% endfor %}
+						<p>Fusce iaculis, sapien vel dapibus accumsan, diam ante ultricies metus, vitae facilisis urna nunc eget eros. Fusce vel metus non arcu scelerisque tincidunt a sed mi. Sed pulvinar mi in tempor semper. Integer pulvinar at justo ac ullamcorper. Integer cursus massa sed sem placerat aliquet. Curabitur ut interdum arcu. Vivamus turpis est, fringilla nec est varius, ultrices egestas nibh. Pellentesque tortor mi, malesuada sit amet auctor at, commodo non sapien. Proin tincidunt justo a iaculis tincidunt. Maecenas facilisis sem ut diam aliquet, et vestibulum nisi elementum. Etiam quam lorem, ultrices vestibulum volutpat eget, egestas nec tortor. Sed neque turpis, aliquet vel leo non, tristique tempus odio.</p>
+						<p>Mauris nec libero sapien. Aenean a justo egestas, porta lectus sed, semper leo. Suspendisse vel ipsum leo. Sed ac odio velit. Mauris feugiat interdum ante sit amet aliquam. Donec pulvinar vitae elit sit amet finibus. Nunc fermentum varius arcu ut tincidunt. Phasellus quis augue vel velit pretium posuere id et est. Fusce pellentesque ex nunc, sit amet lacinia lectus auctor vel. Aenean ullamcorper ullamcorper nulla, ornare imperdiet orci vestibulum nec. Fusce facilisis magna mauris, sed vulputate orci ullamcorper eget. Vestibulum non fringilla massa. In vel venenatis tortor.</p>
 
 						<figure class="figure float-sm-right ml-3">
 							<img class="img-fluid" src="https://placehold.it/250" alt="placeholder">
-							<figcaption class="figure-caption">Caption for the article image.</figcaption>
+							<figcaption class="figure-caption">Eu facilisis augue lacus sit amet turpis.</figcaption>
 						</figure>
 
 						{% for i in range(0, 3) -%}
@@ -138,19 +118,44 @@
 	<footer class="article__related section-lg bg-pale-blue bg-pattern-geometric pt-5">
 		<div class="container">
 			<div class="wysiwyg">
-				<h2 class="mt-0">Related Stories</h2>
+				<h2 class="mt-0">Features</h2>
 				<div class="row">
-					{% for i in range(0, 4) -%}
 					<div class="col-6 col-md-3 mb-3 mb-lg-0">
 						<article class="article article__related-entry">
 							<a href="#">
-								<img class="img-fluid w-100 mb-2" src="https://placehold.it/510x287" alt="placeholder">
-								<h1 class="article__related-title body-text font-weight-bold">Related Article Title that is a Little Long</h1>
+								<img class="img-fluid w-100 mb-2" src="http://via.placeholder.com/600x400&text=Image" alt="placeholder">
+								<h1 class="article__related-title body-text font-weight-bold">Donec at Nunc Sit Amet</h1>
 							</a>
 						</article>
 					</div>
 					<!-- .col-6 -->
-					{% endfor %}
+					<div class="col-6 col-md-3 mb-3 mb-lg-0">
+						<article class="article article__related-entry">
+							<a href="#">
+								<img class="img-fluid w-100 mb-2" src="http://via.placeholder.com/600x400&text=Image" alt="placeholder">
+								<h1 class="article__related-title body-text font-weight-bold">Nulla Malesuada Sed</h1>
+							</a>
+						</article>
+					</div>
+					<!-- .col-6 -->
+					<div class="col-6 col-md-3 mb-3 mb-lg-0">
+						<article class="article article__related-entry">
+							<a href="#">
+								<img class="img-fluid w-100 mb-2" src="http://via.placeholder.com/600x400&text=Image" alt="placeholder">
+								<h1 class="article__related-title body-text font-weight-bold">Proin Ac Lectus Viverra, Semper Ipsum Ac, Facilisis Lectus</h1>
+							</a>
+						</article>
+					</div>
+					<!-- .col-6 -->
+					<div class="col-6 col-md-3 mb-3 mb-lg-0">
+						<article class="article article__related-entry">
+							<a href="#">
+								<img class="img-fluid w-100 mb-2" src="http://via.placeholder.com/600x400&text=Image" alt="placeholder">
+								<h1 class="article__related-title body-text font-weight-bold">Nulla Ac Nulla Rhoncus, Faucibus Urna Non</h1>
+							</a>
+						</article>
+					</div>
+					<!-- .col-6 -->
 				</div>
 				<!-- .row -->
 			</div>

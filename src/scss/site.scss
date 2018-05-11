@@ -11,4 +11,67 @@
     "vendor/dataTables/custom",
 
     // PayPal accessibility CSS for Bootstrap
-    "vendor/paypal/bootstrap-accessibility"
+    "vendor/paypal/bootstrap-accessibility";
+
+/* Site-specific styles */
+
+.issue-title {
+	@include body-font;
+	font-size: 1rem;
+	font-weight: bold;
+	color: $body-color;
+}
+a.index-feature {
+	text-decoration: none;
+	color: $body-color;
+	outline: solid 1px transparent;
+	transition: background-color .25s, outline-color .25s;
+	&:hover {
+		background-color: lighten($pale-blue, 2%);
+		outline-color: $sky-blue;
+	}
+	h2, h3 {
+		color: theme-color("primary");
+	}
+	.h3 {
+		font-size: 1.5rem;
+	}
+	.h4 {
+		color: $gold;
+	}
+}
+.index-feature-secondary {
+	background-color: $pale-blue;
+}
+.promo-banner {
+	img {
+		max-width: 300px;
+		outline: solid 1px transparent;
+		transition: outline-color .25s;
+	}
+	&:hover {
+		img {
+			outline-color: $sky-blue;
+		}
+	}
+}
+.article__author::after {
+	display: none;
+}
+.figure {
+	&.float-sm-left, &.float-sm-right {
+		width: 250px;
+	}
+}
+@include media-breakpoint-up(lg) {
+	a.index-feature {
+		figure, p {
+			margin-bottom: 0;
+		}
+		&.index-feature-tertiary {
+			figure {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
