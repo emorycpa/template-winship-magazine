@@ -9927,8 +9927,12 @@ a.index-feature {
 .article__author::after {
   display: none; }
 
-.figure.float-sm-left, .figure.float-sm-right {
-  width: 250px; }
+.article-subhead {
+  font-size: 1.25rem; }
+
+@media (min-width: 576px) {
+  .figure.float-sm-left, .figure.float-sm-right {
+    max-width: 50%; } }
 
 @media (min-width: 992px) {
   a.index-feature figure, a.index-feature p {

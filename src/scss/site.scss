@@ -58,9 +58,14 @@ a.index-feature {
 .article__author::after {
 	display: none;
 }
-.figure {
-	&.float-sm-left, &.float-sm-right {
-		width: 250px;
+.article-subhead {
+	font-size: 1.25rem;
+}
+@include media-breakpoint-up(sm) {
+	.figure {
+		&.float-sm-left, &.float-sm-right {
+			max-width: 50%;
+		}
 	}
 }
 @include media-breakpoint-up(lg) {
