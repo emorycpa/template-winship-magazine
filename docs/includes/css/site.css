@@ -9903,7 +9903,7 @@ a.index-feature {
   -webkit-transition: background-color .25s, outline-color .25s;
   transition: background-color .25s, outline-color .25s; }
   a.index-feature:hover {
-    background-color: #f3f9fb;
+    background-color: rgba(65, 182, 230, 0.08);
     outline-color: #41b6e6; }
   a.index-feature h2, a.index-feature h3 {
     color: #012169; }
@@ -9911,6 +9911,11 @@ a.index-feature {
     font-size: 1.5rem; }
   a.index-feature .h4 {
     color: #b58500; }
+
+.index-feature-cover.bg-secondary {
+  background-color: #006ca1 !important; }
+  .index-feature-cover.bg-secondary .h4 {
+    color: #f2a900; }
 
 .index-feature-secondary {
   background-color: #ebf5f9; }

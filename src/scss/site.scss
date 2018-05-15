@@ -27,7 +27,7 @@ a.index-feature {
 	outline: solid 1px transparent;
 	transition: background-color .25s, outline-color .25s;
 	&:hover {
-		background-color: lighten($pale-blue, 2%);
+		background-color: rgba($sky-blue, .08);
 		outline-color: $sky-blue;
 	}
 	h2, h3 {
@@ -38,6 +38,12 @@ a.index-feature {
 	}
 	.h4 {
 		color: $gold;
+	}
+}
+.index-feature-cover.bg-secondary {
+	background-color: darken(theme-color("secondary"), 5%) !important;
+	.h4 {
+		color: $yellow;
 	}
 }
 .index-feature-secondary {
