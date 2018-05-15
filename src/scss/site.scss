@@ -40,12 +40,6 @@ a.index-feature {
 		color: $gold;
 	}
 }
-.index-feature-cover.bg-secondary {
-	background-color: darken(theme-color("secondary"), 5%) !important;
-	.h4 {
-		color: $yellow;
-	}
-}
 .index-feature-secondary {
 	background-color: $pale-blue;
 }
