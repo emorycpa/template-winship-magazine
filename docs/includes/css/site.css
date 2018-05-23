@@ -9917,14 +9917,15 @@ a.index-feature {
 .index-feature-secondary {
   background-color: #ebf5f9; }
 
-.promo-banner img {
-  max-width: 300px;
-  outline: solid 1px transparent;
-  -webkit-transition: outline-color .25s;
-  transition: outline-color .25s; }
-
-.promo-banner:hover img {
-  outline-color: #41b6e6; }
+.promo-banner {
+  text-decoration: none; }
+  .promo-banner img {
+    max-width: 300px;
+    outline: solid 1px transparent;
+    -webkit-transition: outline-color .25s;
+    transition: outline-color .25s; }
+  .promo-banner:hover img {
+    outline-color: #41b6e6; }
 
 .article__meta {
   border-bottom: none; }
