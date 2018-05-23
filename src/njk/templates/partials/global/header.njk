@@ -40,10 +40,11 @@
                             <span class="sr-only">(current)</span>
                             {% endif %}
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="article.html">
-                                Archives
-                            </a>
+                        <li class="nav-item{% if pageTitle == 'Archives' %} active{% endif %}">
+                            <a class="nav-link" href="archives.html">Archives</a>
+							{% if pageTitle == 'Archives' %}
+                            <span class="sr-only">(current)</span>
+                            {% endif %}
                         </li>
                        	<li class="nav-item">
                             <a class="nav-link" href="article.html">

@@ -9924,6 +9924,9 @@ a.index-feature {
 .promo-banner:hover img {
   outline-color: #41b6e6; }
 
+.article__meta {
+  border-bottom: none; }
+
 .article__author::after {
   display: none; }
 

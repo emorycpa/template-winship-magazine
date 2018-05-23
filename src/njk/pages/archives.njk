@@ -1,0 +1,15 @@
+{% extends "layout.njk" %} 
+{% set pageTitle = 'Archives' %}
+{% block head %}
+<title>{{ pageTitle }} | {{ siteTitle }}</title>
+{% endblock %} 
+
+{% block content %}
+<main>
+
+{% include "partials/hero/hero-empty.njk" %}
+
+{% include "partials/sections/archives.njk" %}
+
+</main>
+{% endblock %}
