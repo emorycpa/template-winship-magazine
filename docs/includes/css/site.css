@@ -9896,15 +9896,17 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
   font-weight: bold;
   color: #101820; }
 
-a.index-feature {
+a.archive-link, a.index-feature {
   text-decoration: none;
-  color: #101820;
   outline: solid 1px transparent;
   -webkit-transition: background-color .25s, outline-color .25s;
   transition: background-color .25s, outline-color .25s; }
-  a.index-feature:hover {
+  a.archive-link:hover, a.index-feature:hover {
     background-color: rgba(65, 182, 230, 0.08);
     outline-color: #41b6e6; }
+
+a.index-feature {
+  color: #101820; }
   a.index-feature h2, a.index-feature h3 {
     color: #012169; }
   a.index-feature .h3 {

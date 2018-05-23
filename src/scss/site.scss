@@ -21,15 +21,17 @@
 	font-weight: bold;
 	color: $body-color;
 }
-a.index-feature {
+a.archive-link, a.index-feature {
 	text-decoration: none;
-	color: $body-color;
 	outline: solid 1px transparent;
 	transition: background-color .25s, outline-color .25s;
 	&:hover {
 		background-color: rgba($sky-blue, .08);
 		outline-color: $sky-blue;
 	}
+}
+a.index-feature {
+	color: $body-color;
 	h2, h3 {
 		color: theme-color("primary");
 	}
