@@ -9898,12 +9898,11 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 
 a.archive-link, a.index-feature {
   text-decoration: none;
-  outline: solid 1px transparent;
-  -webkit-transition: background-color .25s, outline-color .25s;
-  transition: background-color .25s, outline-color .25s; }
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s; }
   a.archive-link:hover, a.index-feature:hover {
     background-color: rgba(65, 182, 230, 0.08);
-    outline-color: #41b6e6; }
+    outline: solid 1px #41b6e6; }
 
 a.index-feature {
   color: #101820; }

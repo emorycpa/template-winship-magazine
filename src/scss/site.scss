@@ -23,11 +23,10 @@
 }
 a.archive-link, a.index-feature {
 	text-decoration: none;
-	outline: solid 1px transparent;
-	transition: background-color .25s, outline-color .25s;
+	transition: background-color .1s;
 	&:hover {
 		background-color: rgba($sky-blue, .08);
-		outline-color: $sky-blue;
+		outline: solid 1px $sky-blue;
 	}
 }
 a.index-feature {
