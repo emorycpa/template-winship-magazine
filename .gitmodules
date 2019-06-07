@@ -1,0 +1,3 @@
+[submodule "lib/emory-standard-template"]
+	path = lib/emory-standard-template
+	url = https://github.com/emorycpa/template-standard

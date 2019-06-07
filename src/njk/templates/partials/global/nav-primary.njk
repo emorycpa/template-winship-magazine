@@ -1,0 +1,29 @@
+<ul class="navbar-nav" id="nav-main">
+    <li class="nav-item{% if pageTitle == 'June 2018' %} active{% endif %}">
+        <a class="nav-link" href="index.html">Current Issue</a>
+        {% if pageTitle == 'June 2018' %}
+        <span class="sr-only">(current)</span>
+        {% endif %}
+    </li>
+    <li class="nav-item{% if pageTitle == 'Archives' %} active{% endif %}">
+        <a class="nav-link" href="archives.html">Archives</a>
+        {% if pageTitle == 'Archives' %}
+        <span class="sr-only">(current)</span>
+        {% endif %}
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="article.html">
+            About
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="article.html">
+            Contact
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="article.html">
+            Advertise
+        </a>
+    </li>
+</ul>

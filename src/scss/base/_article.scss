@@ -1,0 +1,72 @@
+/* Site-specific styles */
+
+.issue-title {
+	@include body-font;
+	font-size: 1rem;
+	font-weight: bold;
+	color: $body-color;
+}
+a.archive-link, a.index-feature {
+	text-decoration: none;
+	transition: background-color .1s;
+	&:hover {
+		background-color: rgba($sky-blue, .08);
+		outline: solid 1px $sky-blue;
+	}
+}
+a.index-feature {
+	color: $body-color;
+	h2, h3 {
+		color: theme-color("primary");
+	}
+	.h3 {
+		font-size: 1.5rem;
+	}
+	.h4 {
+		color: $gold;
+	}
+}
+.index-feature-secondary {
+	background-color: $pale-blue;
+}
+.promo-banner {
+	text-decoration: none;
+	img {
+		max-width: 300px;
+		outline: solid 1px transparent;
+		transition: outline-color .25s;
+	}
+	&:hover {
+		img {
+			outline-color: $sky-blue;
+		}
+	}
+}
+.article__meta {
+	border-bottom: none;
+}
+.article__author::after {
+	display: none;
+}
+.article-subhead {
+	font-size: 1.25rem;
+}
+@include media-breakpoint-up(sm) {
+	.figure {
+		&.float-sm-left, &.float-sm-right {
+			max-width: 50%;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	a.index-feature {
+		figure, p {
+			margin-bottom: 0;
+		}
+		&.index-feature-tertiary {
+			figure {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

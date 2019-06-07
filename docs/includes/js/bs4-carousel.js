@@ -1,1 +1,0 @@
-var selector = Util.getSelectorFromElement(this);

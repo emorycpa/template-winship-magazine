@@ -1,22 +1,25 @@
-<footer id="siteFooter" class="site-footer">
+<div id="siteFooter" class="site-footer">
 
-	<!-- Emory Shield and Ribbons -->
-	<div class="site-footer__ribbons" role="presentation">
-		<div class="site-footer__ribbons-fold">
-			<span></span>
-		</div>
-		<div class="site-footer__ribbons-yellow"></div>
-		<div class="site-footer__ribbons-blue"></div>
-	</div>
-	<!-- .site-footer__ribbons -->
+	{% include "partials/snippets/skip-footer.njk" %}
 
-	<a href="#">
-		{% include "partials/svg/eu-logo-footer.njk" %}
-	</a>
+    {# Emory Shield and Ribbons #}
+    <div class="site-footer__ribbons" role="presentation">
+        <div class="site-footer__ribbons-fold">
+            <span></span>
+        </div>
+        <div class="site-footer__ribbons-yellow"></div>
+        <div class="site-footer__ribbons-blue"></div>
+    </div>
+    {# /.site-footer__ribbons #}
 
-	<div class="section pb-4 bg-primary">
+    {# Emory Shield Logo #}
+    <a href="#" class="emory-logo">
+        <img src="{{ templateIncludePath }}images/eu-logo-footer.svg" alt="Emory University home" class="site-footer__eu-logo-footer" />
+    </a>
 
-		<div class="container pt-5">
+	<div class="site-footer__content">
+
+        <div class="container">
 
 			<!-- Site Name -->
 			<div class="site-footer__name text-center mb-5">
@@ -78,39 +81,7 @@
 	</div>
 	<!-- .section -->
 
-</footer>
-<!-- #siteFooter -->
-<div id="postFooter" class="site-post-footer">
-
-	<div class="container py-2 text-center">
-		<div class="row">
-
-			<div class="col-sm-4">
-				<small>Copyright &copy;
-					<a href="#">Emory University</a>
-				</small>
-			</div>
-			<!-- .col-sm-4 -->
-
-			<div class="col-sm-4">
-				<small>
-					<a href="#">EO/AA Statement</a> |
-					<a href="#">Copyright</a>
-				</small>
-			</div>
-			<!-- .col-sm-4 -->
-
-			<div class="col-sm-4">
-				<a class="font-weight-bold" href="#">Back to top
-					<span class="fas fa-angle-double-up" aria-hidden="true"></span>
-				</a>
-			</div>
-			<!-- .col-sm-4 -->
-
-		</div>
-		<!-- .row -->
-	</div>
-	<!-- .container -->
+	{# POST FOOTER #}
+    {% include "partials/global/post-footer.njk" %}
 
 </div>
-<!-- #postFooter -->

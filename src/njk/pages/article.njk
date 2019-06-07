@@ -1,15 +1,39 @@
 {% extends "layout.njk" %} 
-{% set pageTitle = 'News' %}
+{% set pageGroup = 'Page Demos' %}
+{% set pageType = 'Article' %}
+{% set pageTitle = 'This is the Title of a News Article' %}
+{% set layout = 'Article' %}
+{% set hero = false %} {# Set true to enable hero #}
+
 {% block head %}
-<title>{{ pageTitle }} | {{ siteTitle }}</title>
+<title>{{ pageTitle }} | {{ siteName }}</title>
 {% endblock %} 
 
 {% block content %}
-<main>
 
-{% include "partials/hero/hero-empty.njk" %}
+    {# Check for hero #}
+    {% if hero == true %}
+        {# Use Full-width Hero #}
+        {% block articleHero %}
+            {% include "partials/hero/hero.njk" %}
+        {% endblock %}
 
-{% include "partials/sections/article.njk" %}
+    {# If hero is not set #}
+    {% else %}
+        {# Use plain article header style #}
+        {% block articleHeader %}
+            {% include "partials/sections/article-header.njk" %}
+        {% endblock %}
+    {% endif %}
 
-</main>
+    {# Article Body Content #}
+    {% block articleBody %}
+        {% include "partials/sections/article-body.njk" %}
+    {% endblock %}
+
+    {# Related Article Content #}
+    {% block articleFooter %}
+        {% include "partials/sections/article-footer.njk" %}
+    {% endblock %}
+    
 {% endblock %}

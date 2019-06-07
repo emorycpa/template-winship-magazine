@@ -1,51 +1,34 @@
-<!-- jQuery -->
-<script src="{{ includePath }}js/vendor/jquery/jquery.min.js"></script>
+{##########################################
+JQUERY
+Bootstrap dependency
+https://jquery.com/
+##########################################}
+<script src="{{ templateIncludePath }}js/vendor/jquery/jquery.js"></script>
 
-<!--  
-#########################################
-BOOTSTRAP COMPONENETS
-Include only the JS components needed
-for the website to function
-#########################################
--->
-<script src="{{ includePath }}js/vendor/popper/popper.min.js"></script> <!-- BS collapse dependency -->
-<script src="{{ includePath }}js/vendor/bootstrap/alert.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/button.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/collapse.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/dropdown.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/modal.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/scrollspy.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/tab.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/tooltip.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/popover.js"></script>
-<script src="{{ includePath }}js/vendor/bootstrap/util.js"></script>
+{##########################################
+BOOTSTRAP COMPONENTS
+https://getbootstrap.com/docs/4.1/getting-started/javascript/
+Includes popper.js
+##########################################}
+<script src="{{ templateIncludePath }}js/vendor/bootstrap/bootstrap.bundle.js"></script>
 
-{% if (pageTitle == 'Carousel') or (pageTitle == 'Carousel with Thumbnails') %}
-<script src="{{ includePath }}js/vendor/bootstrap/carousel.js"></script>
-{% endif %}
+{##########################################
+PAYPAL - BOOTSTRAP ACCESSBILITY SUITE
+This trimmed down file contains 
+BS carousel accessibility features
+##########################################}
+<script src="{{ templateIncludePath }}js/vendor/paypal/bootstrap-accessibility.js"></script>
 
-{% if pageTitle == 'Datatable' %}
-<script src="{{ includePath }}js/vendor/dataTables/dataTables.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#dataTable').DataTable();
-});
-</script>
-{% endif %}
+<script src="{{ templateIncludePath }}js/feed/date.js"></script>
+<script src="{{ templateIncludePath }}js/feed/jsonfeed.js"></script>
+<script src="{{ templateIncludePath }}js/feed/feed.jquery.js"></script>
+<script src="{{ templateIncludePath }}js/site.js"></script>
 
-<!-- PAYPAL BOOTSTRAP ACCESSIBLITY https://github.com/paypal/bootstrap-accessibility-plugin/tree/master/plugins/js -->
-<script src="{{ includePath }}js/vendor/paypal/bootstrap-accessibility.js"></script>
-
-<!-- DETECT BOOTSTRAP BREAKPOINTS https://github.com/JacobLett/IfBreakpoint/ -->
-<script src="{{ includePath }}js/vendor/if-b4-breakpoint/if-b4-breakpoint.min.js"></script>
-
-<!--  
-#########################################
+{##########################################
 PRIMARY SITE JAVASCRIPT
 This javascript is a combination of all
 locally imported JS files.
-#########################################
--->
+##########################################}
 <script src="{{ includePath }}js/site.js"></script>
 
 <!-- ADDTHIS SHARE BUTTONS -->

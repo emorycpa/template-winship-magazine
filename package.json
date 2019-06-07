@@ -1,42 +1,51 @@
 {
-  "name": "template-standard.emory.dev",
-  "version": "1.1.9",
-  "description": "The default template used across Emory University web domains.",
+  "name": "template-gynob-magazine",
+  "version": "1.0.0",
+  "description": "A style suitable to display magazine articles using the Emory Brand.",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^8.6.5",
-    "bootstrap": "4.1.1",
-    "browser-sync": "^2.24.7",
-    "chalk": "^2.4.1",
-    "font-awesome": "^4.7.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "autoprefixer": "^9.6.0",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
+    "chalk": "^2.4.2",
+    "chocolat": "^0.4.21",
+    "chokidar": "^3.0.1",
+    "datatables": "^1.10.18",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-debug": "^4.0.0",
-    "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-nunjucks-render": "^2.2.2",
-    "gulp-postcss": "^7.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-tap": "^1.0.1",
-    "gulp-typescript": "^3.2.2",
-    "gulp-uglify": "^3.0.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.4",
-    "typescript": "^2.9.2"
-  },
-  "devDependencies": {
-    "gulp-inline-source": "^3.2.0"
+    "gulp-typescript": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "npm": "^6.9.0",
+    "typescript": "^3.5.1"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions"
+    "last 1 major version",
+    ">= 1%",
+    "Chrome >= 45",
+    "Firefox >= 38",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
   ],
   "scripts": {
     "test": "gulp build"
   },
-  "author": "Kayla Pratt - lockepratt@gmail.com, Bryce Roberts - bryce.leitner.roberts@gmail.com",
-  "license": "CC-BY-NC-ND-4.0"
+  "author": "Bryce Roberts - bryce.leitner.roberts@gmail.com",
+  "license": "CC-BY-NC-ND-4.0",
+  "devDependencies": {}
 }

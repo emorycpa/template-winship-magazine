@@ -1,33 +1,30 @@
-<!-- Copyright -->
+{# Copyright #}
 <link rel="license" href="http://communications.emory.edu/resources/copyright.html">
 
-<!-- Site Icons -->
-<link rel="icon" sizes="192x192" href="{{ includePath }}images/favicon.png"><!-- Icon in the highest resolution we need it for -->
-<link rel="apple-touch-icon" href="{{ includePath }}images/favicon.png"><!-- Apple Touch Icon (reuse 192px icon.png) -->
-<link rel="mask-icon" href="{{ includePath }}images/favicon.svg" color="#012169"><!-- Safari Pinned Tab Icon -->
+{# Site Icons #}
+<link rel="icon" sizes="192x192" href="{{ templateIncludePath }}images/favicon.png">{# Icon in the highest resolution we need it for #}
+<link rel="apple-touch-icon" href="{{ templateIncludePath }}images/favicon.png">{# Apple Touch Icon (reuse 192px icon.png) #}
+<link rel="mask-icon" href="{{ templateIncludePath }}images/favicon.svg" color="#012169">{# Safari Pinned Tab Icon #}
 
-<!--  
-#########################################
+{##########################################
 EXTERNAL LIBRARIES / CDN
-Place links to externally hosted
+Place links to externally hosted 
 CSS libraries below.
-#########################################
--->
+##########################################}
 
-<!-- FONT AWESOME 5
- * Although a script, this goes in the <head>
--->
-<script>
-  FontAwesomeConfig = { searchPseudoElements: true }; // Enable CSS pseudo elements
-</script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+{# FONT AWESOME 5 #}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-<!--  
-#########################################
+{##########################################
+SUBMODULE - STANDARD TEMPLATE STYLESHEET
+This stylesheet pull from Emory
+Standard Template files.
+##########################################}
+<link href="{{ templateIncludePath }}css/site.css" rel="stylesheet">
+
+{##########################################
 PRIMARY SITE STYLESHEET
 This stylesheet is a combination of all
 locally imported SCSS files.
-#########################################
--->
-
+##########################################}
 <link href="{{ includePath }}css/site.css" rel="stylesheet">

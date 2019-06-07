@@ -1,8 +1,25 @@
-<nav aria-label="breadcrumb">
+<nav aria-label="{{ siteName }} breadcrumb navigation">
 	<ol class="breadcrumb mb-0">
 		<li class="breadcrumb-item">
-			<a href="index.html">June 2018</a>
+			<a href="index.html">{{ siteName }}</a>
 		</li>
-		<li class="breadcrumb-item active" aria-current="page">Empowering Teens with Open Doors, Honest Conversations</li>
+		{% if pageLevel %}
+		<li class="breadcrumb-item">
+			<a href="{{ pageType | lower }}.html">{{ pageType }}</a>
+		</li>
+		{% endif %}
+		{% if pageLevel == '2' %}
+		<li class="breadcrumb-item">
+			<a href="interior.html">Interior Page - Level 1</a>
+		</li>
+		{% elif pageLevel == '3' %}
+		<li class="breadcrumb-item">
+			<a href="interior.html">Interior Page - Level 1</a>
+		</li>
+		<li class="breadcrumb-item">
+			<a href="interior-level-2.html">Interior Page - Level 2</a>
+		</li>
+		{% endif %}
+		<li class="breadcrumb-item active" aria-current="page">{{ pageTitle }}{% if pageType == 'Interior' %} - Level {{ pageLevel }}{% endif %}</li>
 	</ol>
 </nav>

@@ -1,0 +1,1 @@
+.article-author,.article-datetime{display:block}@media (min-width:576px){.article-author,.article-datetime{display:inline}}@media (min-width:576px){.article-author::after{content:" | ";color:#41b6e6}}

@@ -1,6 +1,10 @@
 {% set siteName = "GYNOB Magazine" %}
 {% set siteTitle = siteName + " | Emory Gynecology and Obstetrics" %}
+{% set templateIncludePath = "includes/lib/standard-template/" %}
 {% set includePath = "includes/" %}
+{% import "macros.njk" as macros %}
+{% import "lipsum.njk" as lipsum %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +15,114 @@
 </head>
 
 <body>
-    <a id="top" class="sr-only sr-only-focusable">Top of page</a>
-    <a href="#main" class="sr-only sr-only-focusable skip-link">Skip to main content</a>
 
-    {% include "partials/global/header.njk" %}
+    {# Cascade header structure #}
+    <header>
+        <div id="before-header">
+            {% include "partials/snippets/noscript.njk" %}
+            {% include "partials/snippets/skip-header.njk" %}
+        </div>
+        <div id="header">
+            {% include "partials/global/header.njk" %}
+        </div>
+        <div id="after-header"></div>
+    </header>
 
-    <a id="main" class="sr-only sr-only-focusable">Main content</a>
+    {# Cascade main content structure #}
+    <main>
+        <div class="main-content {% if pageType == 'Interior' %} class="interior{{ '-' + pageLevel }}"{% endif %}">
+            <div id="main" class="sr-only anchor-main">Main content</div>
+            
+            {#
+            *
+            * BEGIN LAYOUTS
+            *
+            #}
 
-    {% block content %}{% endblock %}
-    
-    {% include "partials/global/footer.njk" %}
+            {# ARTICLE LAYOUT #}
+            {% if layout == 'Article' %}
+            <article aria-labelledby="page-title">
+                {# Check for hero #}
+                {% if hero %}
+                    {% block articleHero %}{% endblock %}
+                {% endif %}
+                {# Centered content in narrow column #}
+                <div class="container section">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            {# If not hero, use plain article header #}
+                            {% if not hero %}
+                                {% block articleHeader %}{% endblock %}
+                            {% endif %}
+                            {% block articleBody %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {# Use full-width bg-pattern block for article foot #}
+            <div class="section-lg bg-pale-blue bg-pattern-geometric pt-5">
+                <div class="container">
+                    {% block articleFooter %}{% endblock %}
+                </div>
+            </div>
+
+            {# SIDEBAR LAYOUT #}
+            {% elif layout == 'Sidebar' %}
+            {# Main content left, sidebar on right #}
+            <div class="container section">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% block mainContent %}{% endblock %}
+                    </div>
+                    <div class="col-md-4 col-lg-3 offset-lg-1">
+                        <aside class="sidebar">
+                            {% block sidebar %}{% endblock %}
+                        </aside>
+                    </div>
+                </div>
+            </div>
+
+            {# FULL WIDTH LAYOUT #}
+            {% elif layout == 'Full Width' %}
+            {# One full-width section #}
+            <div class="container section">
+                {% block fullWidthContent %}{% endblock %}
+            </div>
+
+            {# FREE-FOR-ALL LAYOUT #}  
+            {% else %}
+                {% block content %}{% endblock %}
+            {% endif %}
+
+            {#
+            *
+            * END LAYOUTS
+            *
+            #}
+
+     </div>
+        {# /.main-content #}
+    </main>
+
+    {# Cascade footer structure #}
+    <footer>
+        <div id="before-footer">
+            {# Check for footer hat content #}
+            {% if footerHat %}
+            <div class="section-lg bg-pale-blue bg-pattern-geometric">
+                <div class="container">
+                    {% block footerHatContent %}{% endblock %}
+                </div>
+            </div>  
+            {% endif %}
+        </div>
+        <div id="footer">
+        {% include "partials/global/footer.njk" %}
+        </div>
+        <div id="after-footer"></div>
+    </footer>
+
+    {# Javascript #}
     {% include "partials/js.njk" %}
 </body>
 

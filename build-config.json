@@ -36,6 +36,11 @@
             "task" : "fonts",
             "source": "./src/fonts/**/*.*", 
             "build" : "./docs/includes/fonts/" 
+        },
+        {
+            "task" : "template",
+            "source": "./lib/emory-standard-template/docs/includes/**/*.*",
+            "build" : "./docs/includes/lib/standard-template/"
         }
     ],
     "browserSync" : {

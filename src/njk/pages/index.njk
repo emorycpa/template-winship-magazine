@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-<main>
 
 <div class="index-feature-cover bg-primary bg-pattern-geometric py-3">
 	<div class="container">
@@ -35,7 +34,7 @@
 			<a href="article.html" class="index-feature index-feature-secondary row flex-column-reverse flex-lg-row-reverse py-3 mr-lg-0">
 				<div class="col-12 col-lg-6">
 					<h2 class="h3">Donec at Nunc Sit Amet</h2>
-					<p>Aenean vehicula metus odio, et vulputate sem pharetra ut.</p>
+					{{ lipsum.paragraph(1) }}
 				</div>
 				<div class="col-12 col-lg-6">
 					<figure>
@@ -48,7 +47,7 @@
 			<a href="article.html" class="index-feature index-feature-secondary row flex-column-reverse flex-lg-row-reverse py-3 ml-lg-0">
 				<div class="col-12 col-lg-6">
 					<h2 class="h3">Nulla Malesuada Sed</h2>
-					<p>Integer diam odio, congue et lacus sit amet, luctus aliquam nulla.</p>
+					{{ lipsum.paragraph(1) }}
 				</div>
 				<div class="col-12 col-lg-6">
 					<figure>
@@ -129,5 +128,4 @@
 	</div>
 </div>
 
-</main>
 {% endblock %}

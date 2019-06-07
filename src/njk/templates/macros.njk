@@ -1,0 +1,46 @@
+{% import "lipsum.njk" as lipsum %}
+
+{# Bootstrap button text link with optional Fontawesome icon #}
+{% macro btn(
+    btnText='Button Text', 
+    btnClass='btn btn-primary', 
+    btnIcon=true, 
+    btnIconClass='fas fa-angle-double-right') %}
+<a href="#" class="{{ btnClass }}">
+    {% if btnIcon == true %}
+	<span class="{{ btnIconClass }}" aria-hidden="true"></span> 
+    {% endif %}
+    <span>{{ btnText }}</span>
+</a>
+{% endmacro %}
+
+{# Fontawesome icon link with no text #}
+{% macro faBtn(
+    iconClass, 
+    ariaLabel, 
+    urlClass) %}
+<a href="#" class="{{ urlClass }}" aria-label="{{ ariaLabel }}">
+    <span class="{{ iconClass }}" aria-hidden="true"></span>
+</a>
+{% endmacro %}
+
+{# Random Fontawesome Icon #}
+{% macro faIcon() -%}
+{% set icons = ['asterisk','users','address-card','bug','bus','cat','cloud-upload-alt','comment-dots','feather-alt','gem','headphones','heartbeat','home','map-marker-alt','shield-alt'] -%}
+{{ icons | random }}
+{% endmacro %}
+
+{# Placeholder ratio image #}
+{% macro img(ratio='3by2', class='img-fluid') %}
+<img src="includes/lib/standard-template/images/placeholders/{{ ratio }}.svg" alt="Placeholder" class="{{ class }}" />
+{% endmacro %}
+
+{# Placeholder image with random photo #}
+{% macro photo(size='600/400', class='img-fluid') %}
+<img src="https://picsum.photos/{{ size }}?image={{ range(0, 1000) | random }}" alt="Placeholder" class="{{ class }}" />
+{% endmacro %}
+
+{# Ornamental Divider #}
+{% macro divider(width) %}
+<hr class="divider-ornamental {{ width }}"/>
+{% endmacro %}

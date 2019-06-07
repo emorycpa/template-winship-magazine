@@ -1,31 +1,38 @@
-<!-- large and up -->
-<form id="searchDesktop" class="form my-4 form-lg-inline ml-lg-auto my-lg-0">
+<form class="form-inline header-search">
 
     <div class="input-group">
-
-        <!-- Search input text box -->
-        <input type="text" class="form-control d-lg-none" placeholder="Enter keywords..." aria-label="Search" id="searchInput">
-
+        
+        {# Search toggle #}
         <div class="input-group-append">
-            <!-- Search submit button -->
-            <input type="submit" name="searchSubmit" value="Search" class="btn btn-primary d-lg-none" id="searchSubmit">
-
-            <!-- Toggle to reveal search input and submit button -->
             <button 
-                id="searchToggle"
-                class="site-header__search-toggle btn btn-secondary d-none d-lg-block"
+                id="search-toggle"
+                class="btn btn-primary header-search__toggle d-none"
                 type="button"
-                title="Toggle search box"
-                data-target="#searchSubmit"
-                aria-hidden="true"
-                aria-controls="searchSubmit">
-                <span class="fas fa-search"></span>
-                <span class="sr-only">Toggle search box</span>
+                aria-label="Toggle search"
+                title="Toggle search">
             </button>
         </div>
-        <!-- .input-group-append -->
+
+        {# Search input box #}
+        <input
+            id="search-input"
+            type="text"
+            class="form-control header-search__input"
+            placeholder="Enter keywords..."
+            aria-label="Enter keywords"/>
+
+        {# Search submit #}
+        <div class="input-group-append">
+            <input
+                id="search-submit"
+                type="submit"
+                name="search"
+                aria-label="Submit search query"
+                value="Search"
+                class="btn btn-secondary header-search__submit"/>
+        </div>
 
     </div>
-    <!-- .input-group -->
+    {# /.input-group #}
 
 </form>

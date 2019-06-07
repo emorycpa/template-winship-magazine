@@ -1,0 +1,71 @@
+{#
+  Lorem ipsum generator
+  Usage:
+  {{ import 'lipsum.njk' as lipsum }}
+  {{ lipsum.sentence() }}
+#}
+
+{#
+  Generate a string of lipsum
+  @param int min Minimum number of words
+  @param int max Maximum number of words
+#}
+{% macro string(min, max) %}
+  {% set words = [
+    'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit', 'curabitur', 'ultrices', 'et', 'mi', 'suscipit', 'eget', 'vulputate', 'ante', 'proin', 'vel', 'pretium', 'enim', 'vivamus', 'venenatis', 'eu', 'urna', 'tempor', 'blandit', 'nullam', 'pellentesque', 'metus', 'rhoncus', 'mauris', 'mollis', 'neque', 'sed', 'tincidunt', 'tellus', 'nunc', 'ac', 'nulla', 'ut', 'purus', 'etiam', 'id', 'dui', 'justo', 'sapien', 'scelerisque', 'viverra', 'ligula', 'aenean', 'porta', 'condimentum', 'nibh', 'dictum', 'congue', 'odio', 'facilisis', 'finibus', 'mattis', 'vehicula', 'lacinia', 'risus', 'placerat', 'augue', 'fringilla', 'at', 'facilisi', 'arcu', 'diam', 'laoreet'
+  ] %}
+  {% set length = range(min, max+1)|random %}
+  {% for word in range(0, length) %}
+    {{ words | random }}
+  {% endfor %}
+{% endmacro %}
+
+{#
+  Generate a string of lipsum in title case
+  @param (optional) int min Minimum number of words, default: 5
+  @param (optional) int max Maximum number of words, default: min
+#}
+{% macro heading(min, max) %}
+  {% if not min %}
+    {% set min = 5 %}
+  {% endif %}
+  {% if not max %}
+    {% set max = min %}
+  {% endif %}
+  {{ string(min, max) | title }}
+{% endmacro %}
+
+{#
+  Generate a sentence of lipsum
+  @param (optional) int min Minimum number of words, default: 20
+  @param (optional) int max Maximum number of words, default: min
+#}
+{% macro sentence(min, max) %}
+  {% if not min %}
+    {% set min = 20 %}
+  {% endif %}
+  {% if not max %}
+    {% set max = min %}
+  {% endif %}
+  {{ string(min, max) | trim | capitalize }}
+{% endmacro %}
+
+{#
+  Generate a paragraph of lipsum
+  @param (optional) int min Minimum number of sentences, default: 5
+  @param (optional) int max Maximum number of sentences, default: min
+#}
+{% macro paragraph(min, max) %}
+  {% if not min %}
+    {% set min = 5 %}
+  {% endif %}
+  {% if not max %}
+    {% set max = min %}
+  {% endif %}
+  <p>
+    {% set sentences = range(min, max+1) | random %}
+    {% for index in range(0, sentences) %}
+      {{ sentence(5, 15) | trim }}.
+    {% endfor %}
+  </p>
+{% endmacro %}

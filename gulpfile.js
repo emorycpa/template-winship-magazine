@@ -229,15 +229,27 @@ function (done) {
   
    
   if(gulp.series){
-    chokidar.watch([normalizePath(getConfig().css.source)]).on('all', (event, path) => {
-      //console.log(event, path);
-      if(event === 'add'){
-        console.log("Added "+path+" to watch.");
-      }
-      if(event === 'change'){
-        gulp.task("serve:reload:build:css")();
-      }
-    });
+    if(getConfig().css.cssPreprocessor){
+      chokidar.watch([normalizePath(getConfig().css.source).replace('*','**/*')]).on('all', (event, path) => {
+        //console.log(event, path);
+        if(event === 'add'){
+          console.log("SCSS: Added "+path+" to watch.");
+        }
+        if(event === 'change'){
+          gulp.task("serve:reload:build:css")();
+        }
+      });
+    } else {
+      chokidar.watch([normalizePath(getConfig().css.source)]).on('all', (event, path) => {
+        //console.log(event, path);
+        if(event === 'add'){
+          console.log("Added "+path+" to watch.");
+        }
+        if(event === 'change'){
+          gulp.task("serve:reload:build:css")();
+        }
+      });
+    }
     chokidar.watch([normalizePath(getConfig().js.source)]).on('all', (event, path) => {
       //console.log(event, path);
       if(event === 'add'){

@@ -1,0 +1,42 @@
+{# Article lead photo #}
+<figure class="figure mb-5">
+    {{ macros.img(
+        '3by2', 
+        'figure-img img-fluid') }}
+    <figcaption class="figure-caption">Lead photo: {{ lipsum.sentence(16,22) }}</figcaption>
+</figure>
+
+{# Article main text WYSWIYG #}
+<div class="wysiwyg">
+    <div class="lead">Lead text: {{ lipsum.paragraph(2,3) }}</div>
+    {{ lipsum.paragraph(2,3) }}
+    <h2>Heading Level Two</h2>
+    <div class="imported-block float-sm-left mr-3" style="width:25%">
+        <div class="image-with-caption">
+            {{ macros.img(
+                '1by1', 
+                'img-fluid') }}
+            <div class="caption">
+                <p><span class="formatted-header">WIDTH: 25% - {{ lipsum.paragraph(1,2) }}</span></p>
+            </div>
+        </div>
+    </div>
+    {% for i in range(0, 4) -%}
+        {{ lipsum.paragraph(4,5) }}
+    {% endfor %}
+    <h3>Heading Level Three</h3>
+    <div class="imported-block float-sm-right ml-3" style="width:50%">
+        <div class="image-with-caption">
+            {{ macros.img(
+                '4by3', 
+                'img-fluid') }}
+            <div class="caption">
+                <p><span class="formatted-header">WIDTH: 50% - {{ lipsum.paragraph(1,2) }}</span></p>
+            </div>
+        </div>
+    </div>
+    {% for i in range(0, 3) -%}
+        {{ lipsum.paragraph(4,5) }}
+    {% endfor %}
+</div>
+{# /.wysiwyg #}
